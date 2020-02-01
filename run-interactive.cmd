@@ -1,0 +1,1 @@
+docker run -ti --rm -p 80:8000 --name gatsby_run -v C:\Users\nly10093\workspace-thuis\gatsby:/project gatsby /bin/bash
