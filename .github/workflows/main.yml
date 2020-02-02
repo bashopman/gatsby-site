@@ -10,6 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: enriikke/gatsby-gh-pages-action@v2
+
+      - name: Set Node.js
+        uses: actions/setup-node@master
         with:
-          access-token: ${{ secrets.PAT }}
+          node-version: 12.x
+
+      - name: Install dependencies
+        run: npm install 
+
+      - name: Build site
+        run: npm run-script build
