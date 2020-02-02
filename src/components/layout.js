@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import { Helmet } from "react-helmet";
 import { useSiteMetadata } from "../hooks/use-site-metadata";
 
@@ -11,7 +12,9 @@ export default ({ children }) => {
         <meta name="description" content={description} />
       </Helmet>
       <div className="p-20">
-        <h1 className="font-bold text-xl"><a href="/">{title}</a></h1>
+            <Link to="/">
+                <h1 className="font-bold text-xl">{title}</h1>
+            </Link>
         {children}
       </div>
     </>
