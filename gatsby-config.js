@@ -1,11 +1,12 @@
 const siteMetadata = {
-  title: `My Website`,
-  siteUrl: `https://my.web.site`,
-  description: `The best website in the world`
+  title: `CoderDojo Nijmegen`,
+  siteUrl: `https://coderdojo-nijmagen.nl`,
+  description: `Dit is de website van stichting CoderDojo Nijmegen`
 };
 
 module.exports = {
   siteMetadata,
+  pathPrefix: "/gatsby-site",
   plugins: [
     `gatsby-plugin-postcss`,
     `gatsby-plugin-react-helmet`,
@@ -13,12 +14,12 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: siteMetadata.title,
-        short_name: `Short`,
+        short_name: `CoderDojo Nijmegen`,
         start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#000000`,
+        background_color: `#2d3748`,
+        theme_color: `#f7fafc`,
         display: `standalone`,
-        icon: `src/images/icon.svg`
+        icon: `src/images/coderdojo.png`
       }
     },
     {
@@ -32,6 +33,12 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [`gatsby-remark-prismjs`]
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-html-attributes',
+      options: {
+        lang: 'nl'
       }
     }
   ]

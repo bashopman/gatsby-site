@@ -16,7 +16,7 @@ export const usePosts = () => {
               frontmatter {
                 title
                 date
-                formattedDate: date(formatString: "MMMM Do, YYYY")
+                formattedDate: date(formatString: "YYYY-MM-DD")
               }
             }
           }
